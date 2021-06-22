@@ -28,7 +28,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        // Crear post
+        return view('posts.create', compact())
     }
 
     /**
