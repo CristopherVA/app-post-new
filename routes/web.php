@@ -13,12 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts', 'App\Http\Controllers\PageController@posts');
-Route::get('blog/{post}', 'App\Http\Controllers\PageController@post')->name('post');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\PageController@posts');
+Route::get('blog/{post:slug}', 'App\Http\Controllers\PageController@post')->name('post');
+
 
 Auth::routes();
 

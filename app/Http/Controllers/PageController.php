@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function posts()
@@ -18,7 +18,5 @@ class PageController extends Controller
         return view('post', ['post' => $post]);
     }
 
-    public function getGetExcerptAttribute(){
-        return substr($this->body, 0, 140);
-    }
+    
 }
